@@ -43,6 +43,10 @@ const Modal = ({isShowModal, handleClosedModal, handleSubmit, submit, register, 
           <label className="font-light" htmlFor="birthday">Cumpleaños </label>
           <input className="outline-none border px-2 py-1 rounded-sm" id='birthday' type="date" {...register("birthday")}/>
         </div>
+        <div className="grid gap-1 ">
+          <label className="font-light" htmlFor="birthday">Guardar url de imagen </label>
+          <input className="outline-none border px-2 py-1 rounded-sm" id='birthday' type="strings" {...register("image_url")}/>
+        </div>
         <button className="bg-[#555A88] text-white p-2 px-4 uppercase font-semibold rounded-sm hover:bg-[#41456d] transition-colors" type='submit'>{idUserEdit ? "Guardar Cambios" : "Crear Usuario"}</button>
       </form> 
     </section>

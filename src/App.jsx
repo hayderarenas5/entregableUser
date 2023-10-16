@@ -26,7 +26,7 @@ function App() {
     if (idUserEdit) {
       updateUser(data)
     }else{
-    createUser(data)
+      createUser(data)
     }
   }
 
