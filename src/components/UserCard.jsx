@@ -1,6 +1,6 @@
 import { IconEditCircle, IconTrash, IconUserCheck } from "@tabler/icons-react";
 
-const User = ({userInfo, handleUpdate, handleOpenModalDelete}) => {
+const User = ({userInfo, handleUpdate, deleteUsers/* , handleOpenModalDelete */}) => {
   return (
     <article className="border-2 p-2 rounded-lg">
         <h5 className="flex gap-2 items-center text-lg font-semibold uppercase pb-2">{<span className="px-1"> < IconUserCheck /></span>}{userInfo.first_name} {userInfo.last_name} </h5>
@@ -13,7 +13,7 @@ const User = ({userInfo, handleUpdate, handleOpenModalDelete}) => {
             <button onClick={()=>handleUpdate(userInfo)} className="bg-yellow-500 hover:bg-yellow-600 transition-colors text-white p-1 rounded-md">
                 <IconEditCircle size={20}/>
             </button>
-            <button onClick={handleOpenModalDelete} className="bg-[#D85D5D] hover:bg-[#D93F3F] transition-colors text-white p-1 rounded-md">
+            <button onClick={() => deleteUsers(userInfo.id)} className="bg-[#D85D5D] hover:bg-[#D93F3F] transition-colors text-white p-1 rounded-md">
                 <IconTrash size={20}/>
             </button>
         </div>

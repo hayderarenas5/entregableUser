@@ -6,13 +6,13 @@ import Modal from './components/Modal'
 import Header from './components/Header'
 import { useForm } from 'react-hook-form'
 import UserList from './components/UserList'
-import ModalDelete from './components/ModalDelete'
-
+/* import ModalDelete from './components/ModalDelete'
+ */
 function App() {
 
   const [isShowModal, setIsShowModal]=useState(false)
-  const [isShowModalDelete, setIsShowModalDelete]=useState(false)
-
+  /* const [isShowModalDelete, setIsShowModalDelete]=useState(false)
+ */
   const [users, setUsers]=useState([])
 
   const [idUserEdit, setIdUserEdit]=useState(null)
@@ -39,13 +39,13 @@ function App() {
   const handleOpenModal=()=>{
     setIsShowModal(true)
   }
-  const handleOpenModalDelete=()=>{
+  /* const handleOpenModalDelete=()=>{
     setIsShowModalDelete(true)
-  }
+  } */
   
-  const handleClosedModalDelete=()=>{
+  /* const handleClosedModalDelete=()=>{
     setIsShowModalDelete(false)
-  }
+  } */
 
   const createUser=(data)=>{
     axios
@@ -93,8 +93,8 @@ function App() {
     <main className='min-h-screen'>
       <Header handleOpenModal={handleOpenModal}/>
       <Modal isShowModal={isShowModal} handleClosedModal={handleClosedModal} handleSubmit={handleSubmit} submit={submit} register={register} idUserEdit={idUserEdit} errors={errors}/>
-      <ModalDelete isShowModalDelete={isShowModalDelete} handleOpenModalDelete={handleOpenModalDelete} handleClosedModalDelete={handleClosedModalDelete} deleteUsers={deleteUsers} users={users}/>
-      <UserList users={users}  handleOpenModalDelete={handleOpenModalDelete} handleUpdate={handleUpdate}/>
+      <UserList users={users}  /* handleOpenModalDelete={handleOpenModalDelete} */ handleUpdate={handleUpdate} deleteUsers={deleteUsers}/>
+      {/* <ModalDelete isShowModalDelete={isShowModalDelete} handleOpenModalDelete={handleOpenModalDelete} handleClosedModalDelete={handleClosedModalDelete} deleteUsers={deleteUsers} users={users}/> */}
     </main>
   )
 }

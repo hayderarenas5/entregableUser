@@ -1,5 +1,5 @@
-import ModalDelete from "./ModalDelete";
-import UserCard from "./UserCard";
+/* import ModalDelete from "./ModalDelete";
+ */import UserCard from "./UserCard";
 
 const UserList = ({users, deleteUsers, handleUpdate, handleOpenModalDelete}) => {
   return (
@@ -9,11 +9,11 @@ const UserList = ({users, deleteUsers, handleUpdate, handleOpenModalDelete}) => 
                <UserCard key={user.id} userInfo={user} deleteUsers={deleteUsers} handleOpenModalDelete={handleOpenModalDelete} handleUpdate={handleUpdate}/> 
             ))
         },
-        {
+        {/* {
           users.map((user)=>(
             <ModalDelete key={user.id} user={user} deleteUsers={deleteUsers}/>
         ))
-        }
+        } */}
     </section>
   )
 }
